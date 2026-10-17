@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0d1b">
-  <title>Emmy Web Design</title>
+  <meta name="description" content="Emmy Web Design creates modern, mobile-friendly business websites, landing pages, portfolios and online stores.">
+  <title>Emmy Web Design | Modern Websites for Your Business</title>
 
   <style>
     :root {
@@ -33,7 +33,7 @@
 
     header {
       background: #17191f;
-      padding: 22px 18px;
+      padding: 20px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,7 +42,7 @@
     }
 
     .brand {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
       line-height: 1.2;
     }
@@ -50,23 +50,26 @@
     .brand span {
       display: block;
       color: var(--blue);
-      font-size: 12px;
-      letter-spacing: 5px;
+      font-size: 11px;
+      letter-spacing: 3px;
       margin-top: 7px;
     }
 
     nav {
-      padding: 12px;
+      padding: 12px 5px;
       text-align: center;
       background: var(--navy);
       border-bottom: 1px solid #30354d;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: var(--white);
       text-decoration: none;
-      margin: 0 9px;
-      font-size: 13px;
+      margin: 0 7px;
+      font-size: 12px;
     }
 
     nav a:hover {
@@ -75,20 +78,22 @@
 
     .hero {
       text-align: center;
-      padding: 85px 22px 70px;
+      padding: 75px 20px 60px;
+      background: radial-gradient(ellipse at top, #182344, var(--navy) 70%);
     }
 
     .eyebrow {
       color: var(--blue);
       font-weight: bold;
       letter-spacing: 2px;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     h1 {
-      font-size: clamp(36px, 9vw, 58px);
+      font-size: clamp(35px, 8vw, 58px);
       line-height: 1.15;
-      margin: 18px 0;
+      margin: 18px auto;
+      max-width: 850px;
     }
 
     h2 {
@@ -98,82 +103,135 @@
     }
 
     h3 {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1.3;
     }
 
     p {
-      color: var(--white);
+      color: var(--muted);
     }
 
     .hero p {
-      max-width: 540px;
-      margin: 0 auto 25px;
-      font-size: 18px;
+      max-width: 620px;
+      margin: 0 auto 20px;
+      font-size: 17px;
+    }
+
+    .profile {
+      width: 175px;
+      height: 175px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--blue);
+      margin: 20px auto;
+      display: block;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
     }
 
     .button {
       display: inline-block;
       background: var(--lime);
       color: #101322;
-      padding: 13px 22px;
+      padding: 12px 18px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 12px;
+      font-size: 14px;
+      margin-top: 8px;
     }
 
     .button:hover {
       transform: translateY(-2px);
     }
 
+    .secondary {
+      background: transparent;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
+
+    .blue-button {
+      background: var(--blue);
+      color: #101322;
+    }
+
     section {
-      padding: 65px 20px;
-      scroll-margin-top: 20px;
+      padding: 60px 20px;
+      scroll-margin-top: 60px;
+    }
+
+    .alt {
+      background: #101427;
     }
 
     .section-title {
       text-align: center;
-      max-width: 650px;
+      max-width: 680px;
       margin: 0 auto 30px;
-    }
-
-    .section-title p {
-      color: var(--muted);
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      max-width: 1000px;
+      gap: 16px;
+      max-width: 1050px;
       margin: auto;
     }
 
     .card {
       background: var(--card);
       border: 1px solid #30354d;
-      border-radius: 22px;
-      padding: 25px;
-      transition: border-color 0.3s, transform 0.3s;
+      border-radius: 18px;
+      padding: 22px;
+      transition: border-color .3s, transform .3s;
     }
 
     .card:hover {
       border-color: var(--blue);
-      transform: translateY(-4px);
+      transform: translateY(-3px);
     }
 
     .symbol {
-      font-size: 30px;
+      font-size: 27px;
       color: var(--blue);
     }
 
     .card p {
-      color: var(--muted);
+      font-size: 14px;
     }
 
-    .alt {
-      background: #101427;
+    .tag {
+      display: inline-block;
+      color: var(--blue);
+      border: 1px solid #3b5870;
+      border-radius: 20px;
+      padding: 3px 9px;
+      font-size: 11px;
+      margin: 3px;
+    }
+
+    .price {
+      font-size: 27px;
+      font-weight: bold;
+      margin: 8px 0;
+      color: var(--white);
+    }
+
+    .features {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .features li {
+      padding: 3px 0;
     }
 
     .steps {
@@ -184,13 +242,23 @@
 
     .steps li {
       padding: 8px 0;
-      color: var(--white);
+      color: var(--muted);
     }
 
     .contact {
       text-align: center;
       background: #151a30;
       border-top: 1px solid #30354d;
+    }
+
+    .contact p {
+      max-width: 620px;
+      margin: 12px auto;
+    }
+
+    .note {
+      font-size: 12px;
+      text-align: center;
     }
 
     footer {
@@ -202,13 +270,46 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(35px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
     }
 
     .reveal.show {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    @media (max-width: 560px) {
+      header {
+        padding: 18px 12px;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .brand span {
+        font-size: 9px;
+        letter-spacing: 2px;
+      }
+
+      header .button {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+      nav a {
+        margin: 0 4px;
+        font-size: 11px;
+      }
+
+      section {
+        padding: 45px 15px;
+      }
+
+      .hero {
+        padding: 55px 16px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -226,134 +327,409 @@
 </head>
 
 <body>
-  <header id="home">
-    <div class="brand">
-      EMMY WEB DESIGN
-      <span>CREATIVE. PROFESSIONAL.</span>
+
+<header id="home">
+  <div class="brand">
+    EMMY WEB DESIGN
+    <span>CREATIVE. PROFESSIONAL.</span>
+  </div>
+  <a class="button" href="#contact">Let's Talk</a>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#why">Why Me</a>
+  <a href="#packages">Packages</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <!-- HOME -->
+  <section class="hero reveal">
+    <div class="eyebrow">WEB DESIGN • DIGITAL EXPERIENCES • BUSINESS GROWTH</div>
+
+    <h1>Modern Websites. Built for Your Business.</h1>
+
+    <p>
+      I create modern, mobile-friendly websites that help businesses
+      build trust, reach customers and grow online.
+    </p>
+
+    <img
+      class="profile"
+      src="BB593EBA-48B4-46C5-BD13-B63225CC6B52.PNG"
+      alt="Emmy, Web Designer"
+    >
+
+    <div class="buttons">
+      <a class="button" href="#packages">Get a Website Quote</a>
+
+      <a class="button secondary"
+         href="mailto:adishirmmanuel668@gmail.com">
+        Email Me
+      </a>
+
+      <a class="button blue-button"
+         href="https://wa.me/2349049159383"
+         target="_blank" rel="noopener">
+        Chat on WhatsApp ↗
+      </a>
     </div>
-    <a class="button" href="#contact">Let's Talk</a>
-  </header>
+  </section>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#why">Why Me</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <div class="hero reveal">
-      <div class="eyebrow">WEB DESIGN • DIGITAL EXPERIENCES • BUSINESS GROWTH</div>
-      <h1>We Build Digital Experiences That Move Your Business Forward.</h1>
-      <p>
-        I design modern, mobile-friendly websites that help businesses build trust, attract customers and stand out online.
-      </p>
-      <img src="BB593EBA-48B4-46C5-BD13-B63225CC6B52.PNG" alt="Emmy - Web Designer" style="width: 180px; height: 180px; object-fit: cover; object-position: center; border-radius: 50%; border: 3px solid #91e4ff; margin: 20px auto; display: block;">
-      <a class="button" href="#services">Explore My Services ↓</a>
-      <a class="button" href="#contact">Let's Build Together ↗</a>
+  <!-- SERVICES -->
+  <section id="services" class="alt">
+    <div class="section-title reveal">
+      <div class="eyebrow">WHAT I OFFER</div>
+      <h2>My Services</h2>
+      <p>Digital solutions to help your brand look professional and grow online.</p>
     </div>
 
-    <section id="services" class="alt">
-      <div class="section-title reveal">
-        <div class="eyebrow">WHAT I DO</div>
-        <h2>My Services</h2>
-        <p>Digital solutions designed to strengthen your brand, showcase your work and help your business grow online.</p>
-      </div>
+    <div class="cards">
 
-      <div class="cards">
-        <article class="card reveal">
-          <div class="symbol">✦</div>
-          <h3>Personal & Portfolio Websites</h3>
-<p>Build a strong online presence with a professional website that showcases your skills, experience and personal brand.</p>
-        </article>
+      <article class="card reveal">
+        <div class="symbol">✦</div>
+        <h3>Business Website Development</h3>
+        <p>Professional websites that showcase your business and services.</p>
+      </article>
 
-        <article class="card reveal">
-          <div class="symbol">◇</div>
-          <h3>Business Website Development</h3>
-<p>Give your business a professional online presence with a modern website that presents your services and helps customers connect with you.</p>
-        </article>
+      <article class="card reveal">
+        <div class="symbol">↗</div>
+        <h3>Landing Page Design</h3>
+        <p>Focused pages to promote a product, service or special offer.</p>
+      </article>
 
-        <article class="card reveal">
-          <div class="symbol">↗</div>
-          <h3>Website Redesign & Optimization</h3>
-<p>Refresh your existing website with cleaner layouts, improved mobile experiences and a more professional look.</p>
-        </article>
-      </div>
-    </section>
+      <article class="card reveal">
+        <div class="symbol">◇</div>
+        <h3>Personal & Portfolio Websites</h3>
+        <p>Showcase your skills, experience, projects and personal brand.</p>
+      </article>
 
-    <section id="why">
-      <div class="section-title reveal">
-        <div class="eyebrow">WHY WORK WITH ME</div>
-        <h2>Built with Purpose. Designed to Stand Out.</h2>
-      </div>
+      <article class="card reveal">
+        <div class="symbol">▣</div>
+        <h3>E-commerce Websites</h3>
+        <p>Online shops to display products and support online sales.</p>
+      </article>
 
-      <div class="cards">
-        <article class="card reveal">
-          <h3>Clean & Professional</h3>
-          <p>A clean, modern design that builds trust and helps your business make a strong first impression.</p>
-        </article>
+      <article class="card reveal">
+        <div class="symbol">✧</div>
+        <h3>Website Redesign</h3>
+        <p>Give your existing website a cleaner, modern appearance.</p>
+      </article>
 
-        <article class="card reveal">
-          <h3>Mobile-Friendly</h3>
-          <p>Your website will look great and work smoothly on mobile phones, tablets and computers.</p>
-        </article>
+      <article class="card reveal">
+        <div class="symbol">⚙</div>
+        <h3>Website Maintenance & Updates</h3>
+        <p>Refresh website content and make agreed improvements.</p>
+      </article>
 
-        <article class="card reveal">
-          <h3>Built Around You</h3>
-<p>I listen to your goals and create a website tailored to your brand, your needs and your vision.</p>
-        </article>
-      </div>
-    </section>
+      <article class="card reveal">
+        <div class="symbol">✉</div>
+        <h3>Contact Form Integration</h3>
+        <p>Help visitors send enquiries through your website.</p>
+      </article>
 
-    <section id="process" class="alt">
-      <div class="section-title reveal">
-        <div class="eyebrow">HOW IT WORKS</div>
-        <h2>My Simple Process</h2>
-      </div>
+      <article class="card reveal">
+        <div class="symbol">☏</div>
+        <h3>WhatsApp Integration</h3>
+        <p>Make it easy for visitors to contact your business.</p>
+      </article>
 
-      <ol class="steps reveal">
-  <li><strong>Tell Me Your Goals.</strong> Share your ideas, business needs and vision for your website.</li>
-  <li><strong>We Design Your Website.</strong> I create a modern, professional design tailored to your brand.</li>
-  <li><strong>Review and Refine.</strong> Review your website and request any agreed changes.</li>
-  <li><strong>Launch Your Website.</strong> Once everything is approved, your website goes live.</li>
-</ol>
-    </section>
+      <article class="card reveal">
+        <div class="symbol">⌕</div>
+        <h3>Basic SEO</h3>
+        <p>Set up page titles, descriptions and a search-friendly structure.</p>
+      </article>
 
-    <section id="contact" class="contact">
-      <div class="reveal">
-        <div class="eyebrow">LET'S WORK TOGETHER</div>
-        <h2>Ready for Your Own Website?</h2>
-        <p>Have a project in mind? Let's discuss your goals and build a modern website that helps your business stand out.</p>
-        <a class="button" href="https://wa.me/2349049159383" target="_blank" rel="noopener">
-          Chat with me on WhatsApp ↗
+      <article class="card reveal">
+        <div class="symbol">⌖</div>
+        <h3>Google Business Profile Assistance</h3>
+        <p>Guidance for eligible businesses setting up or improving a profile.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="section-title reveal">
+      <div class="eyebrow">WEBSITE CONCEPTS</div>
+      <h2>Portfolio & Website Demos</h2>
+      <p>Explore the types of websites I can create. These are demo ideas, not claims of completed client projects.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card reveal">
+        <div class="symbol">01</div>
+        <h3>Business Website Demo</h3>
+        <p>A professional website concept for a business or service provider.</p>
+        <span class="tag">Business</span>
+        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">02</div>
+        <h3>Fashion Website Demo</h3>
+        <p>A stylish concept for a clothing brand or fashion boutique.</p>
+        <span class="tag">Fashion</span>
+        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">03</div>
+        <h3>Restaurant Website Demo</h3>
+        <p>A website concept for a restaurant, menu and contact details.</p>
+        <span class="tag">Restaurant</span>
+        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">04</div>
+        <h3>Personal Portfolio Demo</h3>
+        <p>A space to present skills, experience and personal projects.</p>
+        <span class="tag">Portfolio</span>
+        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">05</div>
+        <h3>Online Shop Demo</h3>
+        <p>A product-focused website concept for an online store.</p>
+        <span class="tag">E-commerce</span>
+        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE ME -->
+  <section id="why" class="alt">
+    <div class="section-title reveal">
+      <div class="eyebrow">WHY WORK WITH ME</div>
+      <h2>Built with Purpose. Designed to Stand Out.</h2>
+      <p>Practical website solutions shaped around your goals.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <h3>Clean & Professional</h3>
+        <p>Modern designs that make a strong first impression.</p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Mobile-Friendly</h3>
+        <p>Websites designed for phones, tablets and computers.</p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Made for Your Brand</h3>
+        <p>Design choices based on your business and vision.</p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Clear Communication</h3>
+        <p>Discuss your project, price and timeline before work begins.</p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Transparent Pricing</h3>
+        <p>Understand what is included and discuss extra costs in advance.</p>
+      </article>
+
+      <article class="card reveal">
+        <h3>Support After Launch</h3>
+        <p>Ask about post-launch support and maintenance options.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages">
+    <div class="section-title reveal">
+      <div class="eyebrow">WEBSITE PRICING</div>
+      <h2>Choose Your Package</h2>
+      <p>Starting prices for different needs. Final quotes depend on your requirements.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card reveal">
+        <span class="tag">STARTER</span>
+        <h3>Starter Website</h3>
+        <div class="price">₦50,000</div>
+        <p>For individuals and small businesses getting online.</p>
+        <ul class="features">
+          <li>1–3 pages</li>
+          <li>Mobile-friendly design</li>
+          <li>WhatsApp contact button</li>
+          <li>Basic page setup</li>
+          <li>Revisions agreed before work</li>
+        </ul>
+        <a class="button"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Starter%20Website%20package.">
+          Choose Starter
+        </a>
+      </article>
+
+      <article class="card reveal">
+        <span class="tag">POPULAR</span>
+        <h3>Business Website</h3>
+        <div class="price">₦100,000</div>
+        <p>For businesses that need more space to present their services.</p>
+        <ul class="features">
+          <li>Up to 5 pages</li>
+          <li>Mobile-friendly design</li>
+          <li>WhatsApp and contact links</li>
+          <li>Basic SEO setup</li>
+          <li>Revisions agreed before work</li>
+        </ul>
+        <a class="button"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Business%20Website%20package.">
+          Choose Business
+        </a>
+      </article>
+
+      <article class="card reveal">
+        <span class="tag">PREMIUM</span>
+        <h3>Premium Website</h3>
+        <div class="price">₦150,000</div>
+        <p>For brands needing a larger, more complete website.</p>
+        <ul class="features">
+          <li>Up to 8 pages</li>
+          <li>Custom page layouts</li>
+          <li>Mobile-friendly design</li>
+          <li>Basic SEO setup</li>
+          <li>Revisions agreed before work</li>
+        </ul>
+        <a class="button"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Premium%20Website%20package.">
+          Choose Premium
+        </a>
+      </article>
+
+      <article class="card reveal">
+        <h3>Landing Page Package</h3>
+        <div class="price">Request a quote</div>
+        <p>A focused page for a campaign, product or service.</p>
+        <a class="button secondary"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20landing%20page%20quote.">
+          Request Price
+        </a>
+      </article>
+
+      <article class="card reveal">
+        <h3>Portfolio Website Package</h3>
+        <div class="price">Request a quote</div>
+        <p>A personal website to showcase your skills and work.</p>
+        <a class="button secondary"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20portfolio%20website%20quote.">
+          Request Price
+        </a>
+      </article>
+
+      <article class="card reveal">
+        <h3>E-commerce Package</h3>
+        <div class="price">Request a quote</div>
+        <p>An online shop with features based on your products and needs.</p>
+        <a class="button secondary"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20an%20e-commerce%20website%20quote.">
+          Request Price
+        </a>
+      </article>
+
+    </div>
+
+    <p class="note">
+      Domain, hosting, paid tools, online payment setup and extra features may cost more.
+      Revisions and delivery times will be agreed before work begins.
+    </p>
+
+    <div class="buttons reveal">
+      <a class="button"
+         href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20custom%20website%20quote.">
+        Request a Custom Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="alt">
+    <div class="section-title reveal">
+      <div class="eyebrow">HOW IT WORKS</div>
+      <h2>My Simple Process</h2>
+    </div>
+
+    <ol class="steps reveal">
+      <li><strong>Tell Me Your Goals.</strong> Share your ideas and business needs.</li>
+      <li><strong>Get Your Quote.</strong> We agree on features, price and timeline.</li>
+      <li><strong>Design and Review.</strong> I build your website and make agreed changes.</li>
+      <li><strong>Launch Your Website.</strong> We publish it after your approval.</li>
+    </ol>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="reveal">
+      <div class="eyebrow">LET'S WORK TOGETHER</div>
+      <h2>Ready for Your Own Website?</h2>
+      <p>Tell me about your project, and let's find the right website solution for you.</p>
+
+      <div class="buttons">
+        <a class="button"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20website%20quote.">
+          Get a Website Quote
+        </a>
+
+        <a class="button secondary"
+           href="mailto:adishirmmanuel668@gmail.com">
+          Email Me
+        </a>
+
+        <a class="button blue-button"
+           href="https://wa.me/2349049159383"
+           target="_blank" rel="noopener">
+          Chat on WhatsApp ↗
         </a>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    © 2026 Emmy Web Design. All rights reserved.
-  </footer>
+      <p class="note">
+        Email:
+        <a href="mailto:adishirmmanuel668@gmail.com" style="color:var(--blue)">
+          adishirmmanuel668@gmail.com
+        </a>
+      </p>
+    </div>
+  </section>
 
-  <script>
-    const revealItems = document.querySelectorAll(".reveal");
+</main>
 
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
+<footer>
+  © 2026 Emmy Web Design. All rights reserved.
+</footer>
 
-      revealItems.forEach((item) => observer.observe(item));
-    } else {
-      revealItems.forEach((item) => item.classList.add("show"));
-    }
-  </script>
+<script>
+  const revealItems = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("show"));
+  }
+</script>
+
 </body>
 </html>
-“
+
