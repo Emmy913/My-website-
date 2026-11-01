@@ -1,12 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="gSD36jwCQFUU24V8EalKCsJaCaiK9FaaEJbO8XqWsWc" />
+  <meta name="google-site-verification" content="gSD36jwCQFUU24V8EalKCsJaCaiK9FaaEJbO8XqWsWc" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0d1b">
-  <meta name="description" content="Emmy Web Design creates modern, mobile-friendly business websites, landing pages, portfolios and online stores.">
-  <title>Emmy Web Design | Modern Websites for Your Business</title>
+  <meta name="description" content="Emmy Web Design provides digital business solutions, professional websites, online stores, booking systems, customer enquiry tools and business growth support.">
+  <meta name="keywords" content="business solutions, website design, digital solutions, online stores, booking systems, Nigeria">
+  <title>Emmy Web Design | Digital Business Solutions</title>
 
   <style>
     :root {
@@ -16,6 +18,7 @@
       --blue: #91e4ff;
       --lime: #d8ff8a;
       --muted: #c5cce8;
+      --border: #30354d;
     }
 
     * {
@@ -38,7 +41,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      border-bottom: 1px solid #30354d;
+      border-bottom: 1px solid var(--border);
     }
 
     .brand {
@@ -56,13 +59,15 @@
     }
 
     nav {
-      padding: 12px 5px;
+      padding: 13px 5px;
       text-align: center;
       background: var(--navy);
-      border-bottom: 1px solid #30354d;
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 10;
+      overflow-x: auto;
+      white-space: nowrap;
     }
 
     nav a {
@@ -78,7 +83,7 @@
 
     .hero {
       text-align: center;
-      padding: 75px 20px 60px;
+      padding: 80px 20px 65px;
       background: radial-gradient(ellipse at top, #182344, var(--navy) 70%);
     }
 
@@ -93,7 +98,7 @@
       font-size: clamp(35px, 8vw, 58px);
       line-height: 1.15;
       margin: 18px auto;
-      max-width: 850px;
+      max-width: 900px;
     }
 
     h2 {
@@ -112,21 +117,21 @@
     }
 
     .hero p {
-  max-width: 620px;
-  margin: 0 auto 20px;
-  font-size: 16px;
-}
+      max-width: 700px;
+      margin: 0 auto 20px;
+      font-size: 16px;
+    }
 
-.profile {
-  width: 300px;
-  max-width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid var(--blue);
-  margin: 20px auto;
-  display: block;
-}
+    .profile {
+      width: 300px;
+      max-width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid var(--blue);
+      margin: 20px auto;
+      display: block;
+    }
 
     .buttons {
       display: flex;
@@ -146,6 +151,7 @@
       font-weight: bold;
       font-size: 14px;
       margin-top: 8px;
+      transition: transform .3s;
     }
 
     .button:hover {
@@ -164,8 +170,8 @@
     }
 
     section {
-      padding: 60px 20px;
-      scroll-margin-top: 60px;
+      padding: 65px 20px;
+      scroll-margin-top: 65px;
     }
 
     .alt {
@@ -174,24 +180,25 @@
 
     .section-title {
       text-align: center;
-      max-width: 680px;
-      margin: 0 auto 30px;
+      max-width: 720px;
+      margin: 0 auto 35px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      max-width: 1050px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      max-width: 1100px;
       margin: auto;
     }
 
     .card {
       background: var(--card);
-      border: 1px solid #30354d;
+      border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 22px;
+      padding: 23px;
       transition: border-color .3s, transform .3s;
+      overflow: hidden;
     }
 
     .card:hover {
@@ -218,11 +225,25 @@
       margin: 3px;
     }
 
+    .portfolio-image {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
     .price {
       font-size: 27px;
       font-weight: bold;
       margin: 8px 0;
       color: var(--white);
+    }
+
+    .price-note {
+      font-size: 12px;
+      color: var(--blue);
     }
 
     .features {
@@ -232,7 +253,12 @@
     }
 
     .features li {
-      padding: 3px 0;
+      padding: 4px 0;
+    }
+
+    .featured {
+      border: 1px solid var(--blue);
+      box-shadow: 0 0 22px rgba(145, 228, 255, .08);
     }
 
     .steps {
@@ -242,24 +268,34 @@
     }
 
     .steps li {
-      padding: 8px 0;
+      padding: 9px 0;
       color: var(--muted);
     }
 
     .contact {
       text-align: center;
       background: #151a30;
-      border-top: 1px solid #30354d;
+      border-top: 1px solid var(--border);
     }
 
     .contact p {
-      max-width: 620px;
+      max-width: 650px;
       margin: 12px auto;
     }
 
     .note {
       font-size: 12px;
       text-align: center;
+    }
+
+    .contact-info {
+      margin-top: 22px;
+      font-size: 14px;
+    }
+
+    .contact-info a {
+      color: var(--blue);
+      text-decoration: none;
     }
 
     footer {
@@ -300,16 +336,16 @@
       }
 
       nav a {
-        margin: 0 4px;
+        margin: 0 5px;
         font-size: 11px;
       }
 
       section {
-        padding: 45px 15px;
+        padding: 48px 15px;
       }
 
       .hero {
-        padding: 55px 16px;
+        padding: 58px 16px;
       }
     }
 
@@ -332,17 +368,18 @@
 <header id="home">
   <div class="brand">
     EMMY WEB DESIGN
-    <span>CREATIVE. PROFESSIONAL.</span>
+    <span>DIGITAL BUSINESS SOLUTIONS</span>
   </div>
   <a class="button" href="#contact">Let's Talk</a>
 </header>
 
 <nav>
   <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#why">Why Me</a>
+  <a href="#solutions">Solutions</a>
+  <a href="#portfolio">Our Work</a>
+  <a href="#why">Why Us</a>
   <a href="#packages">Packages</a>
+  <a href="#process">Process</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -350,27 +387,28 @@
 
   <!-- HOME -->
   <section class="hero reveal">
-    <div class="eyebrow">WEB DESIGN • DIGITAL EXPERIENCES • BUSINESS GROWTH</div>
+    <div class="eyebrow">DIGITAL SOLUTIONS • BUSINESS GROWTH • TECHNOLOGY</div>
 
-    <h1>Modern Websites. Built for Your Business.</h1>
+    <h1>We Build Digital Solutions That Move Your Business Forward.</h1>
 
     <p>
-      I create modern, mobile-friendly websites that help businesses
-      build trust, reach customers and grow online.
+      We help businesses establish a professional online presence,
+      connect with customers, receive enquiries and improve the way
+      they operate through practical digital solutions.
     </p>
 
     <img
       class="profile"
       src="BB593EBA-48B4-46C5-BD13-B63225CC6B52.PNG"
-      alt="Emmy, Web Designer"
+      alt="Emmy, Founder of Emmy Web Design"
     >
 
     <div class="buttons">
-      <a class="button" href="#packages">Get a Website Quote</a>
+      <a class="button" href="#packages">Explore Our Solutions</a>
 
       <a class="button secondary"
          href="mailto:adishiemmanuel668@gmail.com">
-        Email Me
+        Email Us
       </a>
 
       <a class="button blue-button"
@@ -381,313 +419,506 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="alt">
+  <!-- INTRODUCTION -->
+  <section class="alt">
     <div class="section-title reveal">
-      <div class="eyebrow">WHAT I OFFER</div>
-      <h2>My Services</h2>
-      <p>Digital solutions to help your brand look professional and grow online.</p>
+      <div class="eyebrow">MORE THAN JUST A WEBSITE</div>
+      <h2>Your Business Deserves More Than Just an Online Presence.</h2>
+      <p>
+        A business needs more than attractive pages. It needs useful
+        digital tools that help customers discover its services,
+        make enquiries, explore products and take action.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="symbol">↗</div>
+        <h3>Attract More Customers</h3>
+        <p>
+          Give potential customers a professional place to discover
+          your business and understand what you offer.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">✉</div>
+        <h3>Capture Enquiries</h3>
+        <p>
+          Make it easier for interested customers to contact your
+          business through forms and direct contact options.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">⚙</div>
+        <h3>Improve Business Operations</h3>
+        <p>
+          Explore practical digital tools for bookings, product
+          displays, customer requests and business processes.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section id="solutions">
+    <div class="section-title reveal">
+      <div class="eyebrow">WHAT WE DO</div>
+      <h2>Digital Solutions for Modern Businesses</h2>
+      <p>
+        We help businesses choose and build digital tools based on
+        their goals, customers and daily operations.
+      </p>
     </div>
 
     <div class="cards">
 
       <article class="card reveal">
         <div class="symbol">✦</div>
-        <h3>Business Website Development</h3>
-        <p>Professional websites that showcase your business and services.</p>
-      </article>
-
-      <article class="card reveal">
-        <div class="symbol">↗</div>
-        <h3>Landing Page Design</h3>
-        <p>Focused pages to promote a product, service or special offer.</p>
-      </article>
-
-      <article class="card reveal">
-        <div class="symbol">◇</div>
-        <h3>Personal & Portfolio Websites</h3>
-        <p>Showcase your skills, experience, projects and personal brand.</p>
+        <h3>Business Digital Presence</h3>
+        <p>
+          Professional business websites that introduce your company,
+          explain your services and help customers reach you.
+        </p>
       </article>
 
       <article class="card reveal">
         <div class="symbol">▣</div>
-        <h3>E-commerce Websites</h3>
-        <p>Online shops to display products and support online sales.</p>
+        <h3>Online Store Solutions</h3>
+        <p>
+          Product catalogues, shopping experiences and order systems
+          designed around your products and sales process.
+        </p>
       </article>
 
       <article class="card reveal">
-        <div class="symbol">✧</div>
-        <h3>Website Redesign</h3>
-        <p>Give your existing website a cleaner, modern appearance.</p>
-      </article>
-
-      <article class="card reveal">
-        <div class="symbol">⚙</div>
-        <h3>Website Maintenance & Updates</h3>
-        <p>Refresh website content and make agreed improvements.</p>
+        <div class="symbol">◷</div>
+        <h3>Booking & Appointment Solutions</h3>
+        <p>
+          Help customers request appointments, reservations and
+          services through suitable booking tools.
+        </p>
       </article>
 
       <article class="card reveal">
         <div class="symbol">✉</div>
-        <h3>Contact Form Integration</h3>
-        <p>Help visitors send enquiries through your website.</p>
+        <h3>Customer Enquiry Systems</h3>
+        <p>
+          Enquiry forms and contact systems that help businesses
+          receive and organise customer requests.
+        </p>
       </article>
 
       <article class="card reveal">
         <div class="symbol">☏</div>
-        <h3>WhatsApp Integration</h3>
-        <p>Make it easy for visitors to contact your business.</p>
+        <h3>WhatsApp & Communication Integration</h3>
+        <p>
+          Connect your digital presence to WhatsApp, email and
+          relevant customer communication channels.
+        </p>
       </article>
 
       <article class="card reveal">
         <div class="symbol">⌕</div>
-        <h3>Basic SEO</h3>
-        <p>Set up page titles, descriptions and a search-friendly structure.</p>
+        <h3>Search Visibility Setup</h3>
+        <p>
+          Basic SEO setup, search-friendly page structure and
+          guidance for improving your online visibility.
+        </p>
       </article>
 
       <article class="card reveal">
-        <div class="symbol">⌖</div>
-        <h3>Google Business Profile Assistance</h3>
-        <p>Guidance for eligible businesses setting up or improving a profile.</p>
+        <div class="symbol">◇</div>
+        <h3>Brand & Digital Presentation</h3>
+        <p>
+          Give your business a consistent, professional look across
+          its digital pages and customer touchpoints.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">⚙</div>
+        <h3>Website Redesign & Improvement</h3>
+        <p>
+          Improve an existing website with clearer layouts,
+          better mobile experiences and useful features.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">✧</div>
+        <h3>Ongoing Digital Support</h3>
+        <p>
+          Get help with agreed content updates, maintenance and
+          improvements after your project launches.
+        </p>
       </article>
 
     </div>
   </section>
 
   <!-- PORTFOLIO -->
-  <section id="portfolio">
+  <section id="portfolio" class="alt">
     <div class="section-title reveal">
-      <div class="eyebrow">WEBSITE CONCEPTS</div>
-      <h2>Portfolio & Website Demos</h2>
-      <p>Explore the types of websites I can create. These are demo ideas, not claims of completed client projects.</p>
+      <div class="eyebrow">OUR SOLUTION CONCEPTS</div>
+      <h2>Explore What We Can Build for Your Business</h2>
+      <p>
+        These are demonstration concepts showing the types of
+        business solutions we can develop. They are not presented
+        as completed client projects.
+      </p>
     </div>
 
     <div class="cards">
 
       <article class="card reveal">
-        <div class="symbol">01</div>
-        <h3>Business Website Demo</h3>
-        <p>A professional website concept for a business or service provider.</p>
-        <span class="tag">Business</span>
-        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+        <img
+          class="portfolio-image"
+          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=85"
+          alt="Modern real estate property"
+          loading="lazy"
+        >
+        <span class="tag">DEMO CONCEPT 01</span>
+        <h3>Real Estate Business Solution</h3>
+        <p>
+          A property platform concept for agencies and real estate
+          professionals.
+        </p>
+        <ul class="features">
+          <li>Property listings</li>
+          <li>Property enquiry forms</li>
+          <li>Agent contact integration</li>
+          <li>Property information pages</li>
+        </ul>
+        <a class="button secondary" href="#contact">Build Something Similar</a>
       </article>
 
       <article class="card reveal">
-        <div class="symbol">02</div>
-        <h3>Fashion Website Demo</h3>
-        <p>A stylish concept for a clothing brand or fashion boutique.</p>
-        <span class="tag">Fashion</span>
-        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+        <img
+          class="portfolio-image"
+          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury hotel and swimming pool"
+          loading="lazy"
+        >
+        <span class="tag">DEMO CONCEPT 02</span>
+        <h3>Hotel Booking Solution</h3>
+        <p>
+          A hotel presentation and reservation enquiry concept for
+          hospitality businesses.
+        </p>
+        <ul class="features">
+          <li>Room and facility displays</li>
+          <li>Reservation enquiries</li>
+          <li>Hotel information</li>
+          <li>Location and contact details</li>
+        </ul>
+        <a class="button secondary" href="#contact">Build Something Similar</a>
       </article>
 
       <article class="card reveal">
-        <div class="symbol">03</div>
-        <h3>Restaurant Website Demo</h3>
-        <p>A website concept for a restaurant, menu and contact details.</p>
-        <span class="tag">Restaurant</span>
-        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+        <img
+          class="portfolio-image"
+          src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=85"
+          alt="School classroom"
+          loading="lazy"
+        >
+        <span class="tag">DEMO CONCEPT 03</span>
+        <h3>School Admissions Solution</h3>
+        <p>
+          A digital information and admissions concept for schools
+          and educational institutions.
+        </p>
+        <ul class="features">
+          <li>School information pages</li>
+          <li>Admissions enquiry forms</li>
+          <li>Programmes and facilities</li>
+          <li>Contact and application guidance</li>
+        </ul>
+        <a class="button secondary" href="#contact">Build Something Similar</a>
       </article>
 
       <article class="card reveal">
-        <div class="symbol">04</div>
-        <h3>Personal Portfolio Demo</h3>
-        <p>A space to present skills, experience and personal projects.</p>
-        <span class="tag">Portfolio</span>
-        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+        <img
+          class="portfolio-image"
+          src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1000&q=85"
+          alt="Fashion retail store"
+          loading="lazy"
+        >
+        <span class="tag">DEMO CONCEPT 04</span>
+        <h3>E-commerce Store Solution</h3>
+        <p>
+          An online shopping concept for retailers, fashion brands
+          and product-based businesses.
+        </p>
+        <ul class="features">
+          <li>Product catalogues</li>
+          <li>Shopping bag experience</li>
+          <li>Order enquiry process</li>
+          <li>Payment integration options</li>
+        </ul>
+        <a class="button secondary" href="#contact">Build Something Similar</a>
       </article>
 
       <article class="card reveal">
-        <div class="symbol">05</div>
-        <h3>Online Shop Demo</h3>
-        <p>A product-focused website concept for an online store.</p>
-        <span class="tag">E-commerce</span>
-        <div><a class="button secondary" href="#contact">Build Something Similar</a></div>
+        <img
+          class="portfolio-image"
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+          alt="Professional corporate office"
+          loading="lazy"
+        >
+        <span class="tag">DEMO CONCEPT 05</span>
+        <h3>Corporate Business Solution</h3>
+        <p>
+          A professional digital presentation concept for companies,
+          organisations and service providers.
+        </p>
+        <ul class="features">
+          <li>Company profile</li>
+          <li>Services and departments</li>
+          <li>Customer enquiry forms</li>
+          <li>Professional contact pages</li>
+        </ul>
+        <a class="button secondary" href="#contact">Build Something Similar</a>
       </article>
 
     </div>
   </section>
 
-  <!-- WHY CHOOSE ME -->
-  <section id="why" class="alt">
+  <!-- WHY WORK WITH US -->
+  <section id="why">
     <div class="section-title reveal">
-      <div class="eyebrow">WHY WORK WITH ME</div>
-      <h2>Built with Purpose. Designed to Stand Out.</h2>
-      <p>Practical website solutions shaped around your goals.</p>
+      <div class="eyebrow">WHY WORK WITH EMMY</div>
+      <h2>Professional Thinking. Practical Digital Solutions.</h2>
+      <p>
+        Every project starts with understanding what your business
+        needs and choosing a suitable solution.
+      </p>
     </div>
 
     <div class="cards">
+
       <article class="card reveal">
-        <h3>Clean & Professional</h3>
-        <p>Modern designs that make a strong first impression.</p>
+        <h3>Business-Focused Approach</h3>
+        <p>
+          We focus on your business goals, not just how a website looks.
+        </p>
       </article>
 
       <article class="card reveal">
-        <h3>Mobile-Friendly</h3>
-        <p>Websites designed for phones, tablets and computers.</p>
+        <h3>Modern Design</h3>
+        <p>
+          Clean, professional digital experiences that reflect your brand.
+        </p>
       </article>
 
       <article class="card reveal">
-        <h3>Made for Your Brand</h3>
-        <p>Design choices based on your business and vision.</p>
+        <h3>Mobile-Friendly Experiences</h3>
+        <p>
+          Solutions designed to work across phones, tablets and computers.
+        </p>
       </article>
 
       <article class="card reveal">
-        <h3>Clear Communication</h3>
-        <p>Discuss your project, price and timeline before work begins.</p>
+        <h3>Clear Project Agreements</h3>
+        <p>
+          Features, pricing, delivery times and revisions are discussed
+          before work begins.
+        </p>
       </article>
 
       <article class="card reveal">
         <h3>Transparent Pricing</h3>
-        <p>Understand what is included and discuss extra costs in advance.</p>
+        <p>
+          You receive a clear breakdown of what is included and what
+          may require additional payment.
+        </p>
       </article>
 
       <article class="card reveal">
-        <h3>Support After Launch</h3>
-        <p>Ask about post-launch support and maintenance options.</p>
+        <h3>Support Options</h3>
+        <p>
+          Discuss maintenance and post-launch support for your project.
+        </p>
       </article>
+
     </div>
   </section>
 
   <!-- PACKAGES -->
-  <section id="packages">
+  <section id="packages" class="alt">
     <div class="section-title reveal">
-      <div class="eyebrow">WEBSITE PRICING</div>
-      <h2>Choose Your Package</h2>
-      <p>Starting prices for different needs. Final quotes depend on your requirements.</p>
+      <div class="eyebrow">BUSINESS SOLUTION PACKAGES</div>
+      <h2>Choose the Right Solution for Your Business</h2>
+      <p>
+        Every business is different. Choose a starting package,
+        and we will discuss the features that suit your needs.
+      </p>
     </div>
 
     <div class="cards">
 
       <article class="card reveal">
         <span class="tag">STARTER</span>
-        <h3>Starter Website</h3>
+        <h3>Business Starter</h3>
         <div class="price">₦50,000</div>
-        <p>For individuals and small businesses getting online.</p>
+        <p>For individuals and small businesses establishing their online presence.</p>
         <ul class="features">
-          <li>1–3 pages</li>
-          <li>Mobile-friendly design</li>
+          <li>1–3 website pages</li>
+          <li>Mobile-friendly layout</li>
+          <li>Business information display</li>
           <li>WhatsApp contact button</li>
           <li>Basic page setup</li>
-          <li>Revisions agreed before work</li>
+          <li>Agreed revisions</li>
         </ul>
         <a class="button"
-           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Starter%20Website%20package.">
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Business%20Starter%20package.">
           Choose Starter
         </a>
       </article>
 
       <article class="card reveal">
-        <span class="tag">POPULAR</span>
-        <h3>Business Website</h3>
+        <span class="tag">GROWTH</span>
+        <h3>Business Growth</h3>
         <div class="price">₦100,000</div>
-        <p>For businesses that need more space to present their services.</p>
+        <p>For businesses that want a stronger online presence and more ways to receive enquiries.</p>
         <ul class="features">
           <li>Up to 5 pages</li>
-          <li>Mobile-friendly design</li>
-          <li>WhatsApp and contact links</li>
+          <li>Custom business layout</li>
+          <li>WhatsApp integration</li>
+          <li>Customer enquiry form</li>
           <li>Basic SEO setup</li>
-          <li>Revisions agreed before work</li>
+          <li>Social media links</li>
+          <li>Agreed revisions</li>
         </ul>
         <a class="button"
-           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Business%20Website%20package.">
-          Choose Business
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Business%20Growth%20package.">
+          Choose Growth
         </a>
       </article>
 
-      <article class="card reveal">
-        <span class="tag">PREMIUM</span>
-        <h3>Premium Website</h3>
+      <article class="card featured reveal">
+        <span class="tag">PRO</span>
+        <h3>Business Pro</h3>
         <div class="price">₦150,000</div>
-        <p>For brands needing a larger, more complete website.</p>
+        <p>For growing brands that need a more complete digital experience.</p>
         <ul class="features">
           <li>Up to 8 pages</li>
-          <li>Custom page layouts</li>
-          <li>Mobile-friendly design</li>
-          <li>Basic SEO setup</li>
-          <li>Revisions agreed before work</li>
+          <li>Premium custom design</li>
+          <li>Advanced mobile layout</li>
+          <li>Customer enquiry forms</li>
+          <li>WhatsApp integration</li>
+          <li>SEO and social integration</li>
+          <li>Agreed launch support</li>
         </ul>
         <a class="button"
-           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Premium%20Website%20package.">
-          Choose Premium
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20am%20interested%20in%20the%20Business%20Pro%20package.">
+          Choose Pro
         </a>
       </article>
 
       <article class="card reveal">
-        <h3>Landing Page Package</h3>
-        <div class="price">Request a quote</div>
-        <p>A focused page for a campaign, product or service.</p>
-        <a class="button secondary"
-           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20landing%20page%20quote.">
-          Request Price
-        </a>
-      </article>
-
-      <article class="card reveal">
-        <h3>Portfolio Website Package</h3>
-        <div class="price">Request a quote</div>
-        <p>A personal website to showcase your skills and work.</p>
-        <a class="button secondary"
-           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20portfolio%20website%20quote.">
-          Request Price
-        </a>
-      </article>
-
-      <article class="card reveal">
-        <h3>E-commerce Package</h3>
-        <div class="price">Request a quote</div>
-        <p>An online shop with features based on your products and needs.</p>
-        <a class="button secondary"
-           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20an%20e-commerce%20website%20quote.">
-          Request Price
+        <span class="tag">PREMIUM BUSINESS SOLUTION</span>
+        <h3>Business Elite</h3>
+        <div class="price">₦300,000+</div>
+        <p>For established businesses that require a more customised digital solution.</p>
+        <ul class="features">
+          <li>Up to 12 pages</li>
+          <li>Premium custom website design</li>
+          <li>Advanced mobile-friendly design</li>
+          <li>Professional branding integration</li>
+          <li>WhatsApp integration</li>
+          <li>Booking and appointment features</li>
+          <li>Customer enquiry systems</li>
+          <li>Advanced SEO setup</li>
+          <li>Social media integration</li>
+          <li>Security configuration</li>
+          <li>Agreed post-launch support</li>
+        </ul>
+        <p class="price-note">
+          Final price depends on features, integrations and project scope.
+        </p>
+        <a class="button"
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20to%20discuss%20a%20Business%20Elite%20solution.">
+          Discuss Elite Solution
         </a>
       </article>
 
     </div>
 
     <p class="note">
-      Domain, hosting, paid tools, online payment setup and extra features may cost more.
-      Revisions and delivery times will be agreed before work begins.
+      Prices are starting prices. Domain registration, hosting,
+      paid software, third-party services, payment gateway fees
+      and advanced integrations may be charged separately.
+      Final features, revisions, support and delivery dates will
+      be agreed before work begins.
     </p>
 
     <div class="buttons reveal">
       <a class="button"
-         href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20custom%20website%20quote.">
-        Request a Custom Quote
+         href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20need%20a%20custom%20digital%20business%20solution.">
+        Request a Business Solution
       </a>
     </div>
   </section>
 
   <!-- PROCESS -->
-  <section id="process" class="alt">
+  <section id="process">
     <div class="section-title reveal">
-      <div class="eyebrow">HOW IT WORKS</div>
-      <h2>My Simple Process</h2>
+      <div class="eyebrow">HOW WE WORK</div>
+      <h2>A Clear Process from Idea to Launch</h2>
+      <p>
+        We take time to understand your business before recommending
+        and building a suitable digital solution.
+      </p>
     </div>
 
     <ol class="steps reveal">
-      <li><strong>Tell Me Your Goals.</strong> Share your ideas and business needs.</li>
-      <li><strong>Get Your Quote.</strong> We agree on features, price and timeline.</li>
-      <li><strong>Design and Review.</strong> I build your website and make agreed changes.</li>
-      <li><strong>Launch Your Website.</strong> We publish it after your approval.</li>
+      <li>
+        <strong>Understand Your Business.</strong>
+        Tell us about your business, your customers and the challenge
+        you want to solve.
+      </li>
+      <li>
+        <strong>Plan Your Solution.</strong>
+        We discuss the features, project scope, price and timeline.
+      </li>
+      <li>
+        <strong>Design and Development.</strong>
+        We build the agreed solution and share progress for review.
+      </li>
+      <li>
+        <strong>Review and Improve.</strong>
+        We make the agreed revisions and prepare the project for launch.
+      </li>
+      <li>
+        <strong>Launch and Support.</strong>
+        Your approved solution goes live, with any agreed support
+        arranged for after launch.
+      </li>
     </ol>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="reveal">
-      <div class="eyebrow">LET'S WORK TOGETHER</div>
-      <h2>Ready for Your Own Website?</h2>
-      <p>Tell me about your project, and let's find the right website solution for you.</p>
+      <div class="eyebrow">LET'S BUILD SOMETHING THAT WORKS</div>
+      <h2>What's Your Business Trying to Achieve?</h2>
+      <p>
+        Whether you need a professional online presence, an online
+        store, a booking solution or a complete digital business
+        experience, let's discuss your goals.
+      </p>
 
       <div class="buttons">
         <a class="button"
-           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20a%20website%20quote.">
-          Get a Website Quote
+           href="https://wa.me/2349049159383?text=Hello%20Emmy%2C%20I%20would%20like%20to%20discuss%20a%20digital%20business%20solution.">
+          Discuss Your Project
         </a>
 
         <a class="button secondary"
            href="mailto:adishiemmanuel668@gmail.com">
-          Email Me
+          Email Us
         </a>
 
         <a class="button blue-button"
@@ -697,12 +928,20 @@
         </a>
       </div>
 
-      <p class="note">
-        Email:
-        <a href="mailto:adishiemmanuel668@gmail.com" style="color:var(--blue)">
-          adishiemmanuel668@gmail.com
-        </a>
-      </p>
+      <div class="contact-info">
+        <p>
+          Email:
+          <a href="mailto:adishiemmanuel668@gmail.com">
+            adishiemmanuel668@gmail.com
+          </a>
+        </p>
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/2349049159383" target="_blank" rel="noopener">
+            Chat with Emmy Web Design
+          </a>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -710,6 +949,7 @@
 
 <footer>
   © 2026 Emmy Web Design. All rights reserved.
+  <p>Digital Business Solutions • Design • Development</p>
 </footer>
 
 <script>
@@ -733,4 +973,5 @@
 
 </body>
 </html>
+
 
